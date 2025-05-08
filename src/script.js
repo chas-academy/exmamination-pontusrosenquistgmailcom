@@ -55,23 +55,23 @@
     function showLists () {
 
         // income List
-        incomeList.innerHTML =""
+        incomeList.innerHTML = ""
             for(let income of myIncome){
                 const listItem = document.createElement("li")
-                listItem.textContent = `${income.description} - ${income.amount} kr`
+                listItem.textContent = `${income.description} - ${income.amount} kr (Inkomst)`
                 incomeList.appendChild(listItem)
          }
 
         // expense list
-        expenseList.innerHTML =""
+        expenseList.innerHTML = ""
         for(let income of myExpense){
             const listItem = document.createElement("li")
-            listItem.textContent = `${income.description} - ${income.amount} kr`
+            listItem.textContent = `${income.description} - ${income.amount} kr (Utgift)`
             expenseList.appendChild(listItem)
         }
 
         // transactionlist
-        transactionList.innerHTML =""
+        transactionList.innerHTML = ""
         for(let income of myTransactionList){
             const listItem = document.createElement("li")
             if(income.type === "income"){
