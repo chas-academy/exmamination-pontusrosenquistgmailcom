@@ -66,7 +66,7 @@
         expenseList.innerHTML = ""
         for(let income of myExpense){
             const listItem = document.createElement("li")
-            listItem.textContent = `${income.description} - ${income.amount} kr (Utgift)`
+            listItem.textContent = `${income.description} - ${-income.amount} kr (Utgift)`
             expenseList.appendChild(listItem)
         }
 
@@ -77,7 +77,7 @@
             if(income.type === "income"){
                 listItem.textContent = `${income.description} - ${income.amount} kr (Inkomst)`
             }else if(income.type === "expense"){
-                listItem.textContent = `${income.description} - ${income.amount} kr (Utgift)`
+                listItem.textContent = `${income.description} - ${-income.amount} kr (Utgift)`
             }
             transactionList.appendChild(listItem)
         }
